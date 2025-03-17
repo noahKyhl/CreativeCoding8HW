@@ -1,9 +1,15 @@
 <html>
-    <head>
-        <title>Contact Page</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head>
+<head>
+    <title>Contact Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
     <header id="main-header">
         <h1>Contact Us:</h1>
     </header>
@@ -12,46 +18,60 @@
         <input type="text" id="name">
         <br>
         <br>
+
         <label for="email">Email:</label>
         <input type="email" id="email">
         <br>
         <br>
+
         <label>
             <input type="checkbox" id="terms"> I agree to some unspecified terms
         </label>
         <br>
         <br>
-        <button type="contact me!">Contact Me!</button>
+
+        <button type="submit">Contact Me!</button>
     </form>
 
     <script>
-        document.getElementById("contactForm").addEventListener("contact me!", function(event) {
+        document.getElementById("contactForm").addEventListener("submit", function(event) 
+        {
             let name = document.getElementById("name");
             let email = document.getElementById("email");
             let terms = document.getElementById("terms");
 
+            let valid = true; // Track form validity
+
+            // Reset previous error styles
+            name.classList.remove("error");
+            email.classList.remove("error");
+
             if (!name.value.trim()) {
                 alert("Name is required");
+                name.classList.add("error");
                 name.focus();
-                event.preventDefault();
-                return;
+                valid = false;
             }
 
             if (!email.value.trim()) {
                 alert("Email is required");
+                email.classList.add("error");
                 email.focus();
-                event.preventDefault();
-                return;
+                valid = false;
             }
 
             if (!terms.checked) {
                 alert("You must agree to the terms.");
+                valid = false;
+            }
+
+            if (!valid) {
                 event.preventDefault();
-                return;
             }
         });
     </script>
 
-<a href="index.html">Home</a> |  <a href="page2.html">New to Billiards?</a> | <a href="page3.html">Contest Rules and Requirements</a> |
-
+    <br>
+    <a href="index.html">Home</a> | <a href="page2.html">New to Billiards?</a> | <a href="page3.html">Contest Rules and Requirements</a>
+</body>
 </html>
