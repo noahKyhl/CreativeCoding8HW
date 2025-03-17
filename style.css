@@ -1,0 +1,93 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 15px;
+    color: #000000;
+    text-align: left;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+form {
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(61, 130, 79, 0.1);
+    box-sizing: border-box; /*padding*/
+}
+
+label {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 8px;
+    display: block;  /*ensures labels r separate*/
+}
+
+input, button {
+    display: block;
+    border: 2px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input:focus, button:focus {
+    border-color: #71caa8; 
+    box-shadow: 0 0 10px rgba(76, 145, 175, 0.4);
+}
+
+input {
+    background-color: #fafafa;
+}
+
+button {
+    background-color: #5ad16e; 
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #71caa8; 
+}
+
+/*seperator*/
+hr {
+    border: 0;
+    border-top: 2px solid #ddd;
+    margin: 20px 0;
+}
+
+/*border around text*/
+.container {
+    padding: 20px;
+    border: 2px solid #ddd;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/*highlight items in text*/
+.highlight {
+    background-color: #000000;
+    color: #fffffff3;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* ID selectors */
+#main-header {
+    color: #000000;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#form-container {
+    background-color: #e0e0e0;
+    padding: q0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
